@@ -1,20 +1,14 @@
 //
-//  NativeHandleOwner.swift
-//  SwiftSignal
-//
-//  Created by Angelos Staboulis on 7/4/22.
+// Copyright 2020-2021 Signal Messenger, LLC.
+// SPDX-License-Identifier: AGPL-3.0-only
 //
 
-import Foundation
-@objc(NativeHandleOwner)
-public class NativeHandleOwner:NSObject {
+@objcMembers public class NativeHandleOwner {
     fileprivate enum MaybeOwnedHandle {
         case borrowed(OpaquePointer)
         case owned(OpaquePointer)
     }
-    override public init() {
-        
-    }
+
     fileprivate var handle: MaybeOwnedHandle?
 
     /// Returns the native handle (if any) without any lifetime guarantees.
@@ -31,7 +25,9 @@ public class NativeHandleOwner:NSObject {
             return handle
         }
     }
-
+    public func addNumbers()->Int{
+        return 100+100
+    }
     required internal init(owned handle: OpaquePointer) {
         self.handle = .owned(handle)
     }
@@ -40,9 +36,9 @@ public class NativeHandleOwner:NSObject {
         self.handle = handle.map { .borrowed($0) }
     }
 
-//    internal class func destroyNativeHandle(_ handle: OpaquePointer) -> SignalFfiErrorRef? {
-//        fatalError("must be implemented by subclasses")
-//    }
+    internal class func destroyNativeHandle(_ handle: OpaquePointer) -> SignalFfiErrorRef? {
+        fatalError("must be implemented by subclasses")
+    }
 
     deinit {
         switch handle {
@@ -51,8 +47,7 @@ public class NativeHandleOwner:NSObject {
         case .borrowed?:
             preconditionFailure("borrowed handle may have escaped")
         case .owned(let handle)?:
-           // failOnError(Self.destroyNativeHandle(handle))
-            debugPrint("Something went wrong")
+            failOnError(Self.destroyNativeHandle(handle))
         }
     }
 
@@ -64,9 +59,6 @@ public class NativeHandleOwner:NSObject {
         return try withExtendedLifetime(self) {
             try callback(self.unsafeNativeHandle)
         }
-    }
-    @objc public func addNumbers()->Int{
-        return 100+100
     }
 }
 
@@ -108,7 +100,7 @@ public class ClonableHandleOwner: NativeHandleOwner {
         }
         var newHandle: OpaquePointer?
         // Automatic cloning must not fail.
-        //failOnError(Self.cloneNativeHandle(&newHandle, currentHandle: currentHandle))
+        failOnError(Self.cloneNativeHandle(&newHandle, currentHandle: currentHandle))
         self.handle = .owned(newHandle!)
     }
 
@@ -132,9 +124,9 @@ public class ClonableHandleOwner: NativeHandleOwner {
         handle = nil
     }
 
-//    internal class func cloneNativeHandle(_ newHandle: inout OpaquePointer?, currentHandle: OpaquePointer?) -> SignalFfiErrorRef? {
-//       // fatalError("must be implemented by subclasses")
-//    }
+    internal class func cloneNativeHandle(_ newHandle: inout OpaquePointer?, currentHandle: OpaquePointer?) -> SignalFfiErrorRef? {
+        fatalError("must be implemented by subclasses")
+    }
 }
 
 /// Ensures that `handleOwner` actually does own its handle by cloning it.
@@ -159,8 +151,8 @@ internal func cloneOrTakeHandle<Owner: ClonableHandleOwner>(from handleOwner: in
     }
 
     var result: OpaquePointer?
-//    try handleOwner.withNativeHandle {
-//        try checkError(type(of: handleOwner).cloneNativeHandle(&result, currentHandle: $0))
-//    }
+    try handleOwner.withNativeHandle {
+        try checkError(type(of: handleOwner).cloneNativeHandle(&result, currentHandle: $0))
+    }
     return result
 }

@@ -15,7 +15,3 @@ FOUNDATION_EXPORT const unsigned char SwiftSignalVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SwiftSignal/PublicHeader.h>
 
-@interface NativeHandleOwner
-+ (NativeHandleOwner *)new;
-- (int)addNumbers;
-@end

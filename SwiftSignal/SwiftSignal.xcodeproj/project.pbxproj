@@ -7,16 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D601AC7F27FE52EC0018A07D /* SwiftSignal.h in Sources */ = {isa = PBXBuildFile; fileRef = D6C10B6227FCEBAD009DFF99 /* SwiftSignal.h */; };
+		D601ACDD27FE56B80018A07D /* NativeHandleOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601ACDC27FE56B80018A07D /* NativeHandleOwner.swift */; };
 		D6C10B6427FCEBAD009DFF99 /* SwiftSignal.docc in Sources */ = {isa = PBXBuildFile; fileRef = D6C10B6327FCEBAD009DFF99 /* SwiftSignal.docc */; };
 		D6C10B6A27FCEBAD009DFF99 /* SwiftSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C10B5F27FCEBAD009DFF99 /* SwiftSignal.framework */; };
 		D6C10B6F27FCEBAD009DFF99 /* SwiftSignalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C10B6E27FCEBAD009DFF99 /* SwiftSignalTests.swift */; };
 		D6C10B7027FCEBAD009DFF99 /* SwiftSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C10B6227FCEBAD009DFF99 /* SwiftSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6C10B7A27FCEC64009DFF99 /* swift in Resources */ = {isa = PBXBuildFile; fileRef = D6C10B7927FCEC64009DFF99 /* swift */; };
-		D6C10BA727FCFF64009DFF99 /* swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C10B7927FCEC64009DFF99 /* swift */; };
-		D6C10BAB27FD0124009DFF99 /* NativeHandleOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C10BAA27FD0124009DFF99 /* NativeHandleOwner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D601ACC727FE530E0018A07D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D601ACC127FE530D0018A07D /* ObjcClass.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D601AC8927FE530B0018A07D;
+			remoteInfo = ObjcClass;
+		};
+		D601ACC927FE530E0018A07D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D601ACC127FE530D0018A07D /* ObjcClass.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D601ACA427FE530D0018A07D;
+			remoteInfo = ObjcClassTests;
+		};
+		D601ACCB27FE530E0018A07D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D601ACC127FE530D0018A07D /* ObjcClass.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D601ACAE27FE530D0018A07D;
+			remoteInfo = ObjcClassUITests;
+		};
 		D6C10B6B27FCEBAD009DFF99 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D6C10B5627FCEBAD009DFF99 /* Project object */;
@@ -24,39 +44,18 @@
 			remoteGlobalIDString = D6C10B5E27FCEBAD009DFF99;
 			remoteInfo = SwiftSignal;
 		};
-		D6C10C5027FD0A60009DFF99 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D6C10C4A27FD0A5E009DFF99 /* ClassObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D6C10C1227FD0A5C009DFF99;
-			remoteInfo = ClassObjC;
-		};
-		D6C10C5227FD0A60009DFF99 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D6C10C4A27FD0A5E009DFF99 /* ClassObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D6C10C2D27FD0A5E009DFF99;
-			remoteInfo = ClassObjCTests;
-		};
-		D6C10C5427FD0A60009DFF99 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D6C10C4A27FD0A5E009DFF99 /* ClassObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D6C10C3727FD0A5E009DFF99;
-			remoteInfo = ClassObjCUITests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D601ACC127FE530D0018A07D /* ObjcClass.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjcClass.xcodeproj; path = "../../../iOS-Projects/ObjcClass/ObjcClass.xcodeproj"; sourceTree = "<group>"; };
+		D601ACDC27FE56B80018A07D /* NativeHandleOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeHandleOwner.swift; sourceTree = "<group>"; };
+		D601ACDE27FE56CE0018A07D /* swift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = swift; sourceTree = "<group>"; };
 		D6C10B5F27FCEBAD009DFF99 /* SwiftSignal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSignal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C10B6227FCEBAD009DFF99 /* SwiftSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSignal.h; sourceTree = "<group>"; };
 		D6C10B6327FCEBAD009DFF99 /* SwiftSignal.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SwiftSignal.docc; sourceTree = "<group>"; };
 		D6C10B6927FCEBAD009DFF99 /* SwiftSignalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSignalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C10B6E27FCEBAD009DFF99 /* SwiftSignalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSignalTests.swift; sourceTree = "<group>"; };
-		D6C10B7927FCEC64009DFF99 /* swift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = swift; path = "../../../Downloads/libsignal-client-main/swift"; sourceTree = "<group>"; };
 		D6C10BA827FCFFD0009DFF99 /* libsignal_ffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsignal_ffi.a; path = "../../Downloads/libsignal-client-main/target/debug/libsignal_ffi.a"; sourceTree = "<group>"; };
-		D6C10BAA27FD0124009DFF99 /* NativeHandleOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeHandleOwner.swift; sourceTree = "<group>"; };
-		D6C10C4A27FD0A5E009DFF99 /* ClassObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ClassObjC.xcodeproj; path = ../ClassObjC/ClassObjC.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +77,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D601ACC227FE530D0018A07D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D601ACC827FE530E0018A07D /* ObjcClass.app */,
+				D601ACCA27FE530E0018A07D /* ObjcClassTests.xctest */,
+				D601ACCC27FE530E0018A07D /* ObjcClassUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D6C10B5527FCEBAD009DFF99 = {
 			isa = PBXGroup;
 			children = (
-				D6C10C4A27FD0A5E009DFF99 /* ClassObjC.xcodeproj */,
+				D601ACC127FE530D0018A07D /* ObjcClass.xcodeproj */,
 				D6C10B6127FCEBAD009DFF99 /* SwiftSignal */,
 				D6C10B6D27FCEBAD009DFF99 /* SwiftSignalTests */,
 				D6C10B6027FCEBAD009DFF99 /* Products */,
@@ -101,10 +110,10 @@
 		D6C10B6127FCEBAD009DFF99 /* SwiftSignal */ = {
 			isa = PBXGroup;
 			children = (
-				D6C10B7927FCEC64009DFF99 /* swift */,
+				D601ACDE27FE56CE0018A07D /* swift */,
 				D6C10B6227FCEBAD009DFF99 /* SwiftSignal.h */,
-				D6C10BAA27FD0124009DFF99 /* NativeHandleOwner.swift */,
 				D6C10B6327FCEBAD009DFF99 /* SwiftSignal.docc */,
+				D601ACDC27FE56B80018A07D /* NativeHandleOwner.swift */,
 			);
 			path = SwiftSignal;
 			sourceTree = "<group>";
@@ -123,16 +132,6 @@
 				D6C10BA827FCFFD0009DFF99 /* libsignal_ffi.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D6C10C4B27FD0A5E009DFF99 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D6C10C5127FD0A60009DFF99 /* ClassObjC.app */,
-				D6C10C5327FD0A60009DFF99 /* ClassObjCTests.xctest */,
-				D6C10C5527FD0A60009DFF99 /* ClassObjCUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,8 +217,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = D6C10C4B27FD0A5E009DFF99 /* Products */;
-					ProjectRef = D6C10C4A27FD0A5E009DFF99 /* ClassObjC.xcodeproj */;
+					ProductGroup = D601ACC227FE530D0018A07D /* Products */;
+					ProjectRef = D601ACC127FE530D0018A07D /* ObjcClass.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -231,25 +230,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D6C10C5127FD0A60009DFF99 /* ClassObjC.app */ = {
+		D601ACC827FE530E0018A07D /* ObjcClass.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = ClassObjC.app;
-			remoteRef = D6C10C5027FD0A60009DFF99 /* PBXContainerItemProxy */;
+			path = ObjcClass.app;
+			remoteRef = D601ACC727FE530E0018A07D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D6C10C5327FD0A60009DFF99 /* ClassObjCTests.xctest */ = {
+		D601ACCA27FE530E0018A07D /* ObjcClassTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = ClassObjCTests.xctest;
-			remoteRef = D6C10C5227FD0A60009DFF99 /* PBXContainerItemProxy */;
+			path = ObjcClassTests.xctest;
+			remoteRef = D601ACC927FE530E0018A07D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D6C10C5527FD0A60009DFF99 /* ClassObjCUITests.xctest */ = {
+		D601ACCC27FE530E0018A07D /* ObjcClassUITests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = ClassObjCUITests.xctest;
-			remoteRef = D6C10C5427FD0A60009DFF99 /* PBXContainerItemProxy */;
+			path = ObjcClassUITests.xctest;
+			remoteRef = D601ACCB27FE530E0018A07D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -259,7 +258,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6C10B7A27FCEC64009DFF99 /* swift in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6C10BAB27FD0124009DFF99 /* NativeHandleOwner.swift in Sources */,
-				D6C10BA727FCFF64009DFF99 /* swift in Sources */,
+				D601ACDD27FE56B80018A07D /* NativeHandleOwner.swift in Sources */,
+				D601AC7F27FE52EC0018A07D /* SwiftSignal.h in Sources */,
 				D6C10B6427FCEBAD009DFF99 /* SwiftSignal.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
